@@ -15,7 +15,7 @@ export class AuthController {
 
   signup(@Body() dto:AuthTypes){
     console.log({dto})
-      return this.authService.signup()
+      return this.authService.signup(dto)
   }
   @Post('signin')
   @ApiResponse({status: 200})
