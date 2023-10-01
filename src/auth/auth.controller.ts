@@ -21,7 +21,7 @@ export class AuthController {
   @ApiResponse({status: 200})
   @ApiBadRequestResponse({description: "Bad Request"})
 
-  signin(){
-      return this.authService.signin()
+  signin(@Body() dto:AuthTypes){
+      return this.authService.signin(dto)
   }
 }
