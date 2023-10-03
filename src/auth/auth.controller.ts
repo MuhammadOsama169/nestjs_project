@@ -14,7 +14,7 @@ export class AuthController {
   @ApiBadRequestResponse({description: "Bad Request"})
 
   signup(@Body() dto:AuthTypes){
-    console.log({dto})
+    // console.log({dto})
       return this.authService.signup(dto)
   }
   @Post('signin')
